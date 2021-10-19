@@ -15,3 +15,8 @@ object_name_in_gcs_bucket = bucket.blob('my_first_gcs_upload.txt')
 # Name of the object in local file system
 
 object_name_in_gcs_bucket.upload_from_filename('C:/Terraform/testblob.txt')
+
+blobs = client.list_blobs("dcmbucket")
+for blob in blobs:
+    #if str(blob) == "my_first_gcs_upload.txt":
+        print(blob)
